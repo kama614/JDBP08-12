@@ -1,3 +1,8 @@
+//  AuthFilter (認証フィルタ)
+// AuthFilter の目的は、リクエストを処理する前に、
+// ユーザーの認証やアクセス権限を確認。
+// ログインチェック、権限チェック、セッション管理の実装
+
 package filter;
 
 import java.io.IOException;
@@ -49,3 +54,8 @@ public class AuthFilter extends HttpFilter implements Filter {
 	}
 
 }
+/*
+必要性
+セキュリティ向上: 認証されていないユーザーや権限が不足しているユーザーが、保護されたリソースにアクセスするのを防ぐ。
+統一性: 各サーブレットやJSPで個別に認証処理を記述する必要がなくなる。
+効率性: 認証を一元管理することで、コードの重複を防ぎ、メンテナンスが容易になる。*/

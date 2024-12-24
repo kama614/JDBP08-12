@@ -1,3 +1,6 @@
+// CharsetFilter (文字コードフィルタ)
+// CharsetFilter の目的は、リクエストおよびレスポンスの文字コードを統一すること
+// リクエスト文字コードの設定、レスポンス文字コードの設定
 package filter;
 
 import java.io.IOException;
@@ -50,3 +53,9 @@ public class CharsetFiltere implements Filter {
 	}
 
 }
+/*
+必要性
+文字化け防止: フォームデータやレスポンスデータが文字化けする問題を防ぐ。
+統一性: アプリケーション全体で文字コードを統一することで、処理の一貫性を保つ。
+効率性: 各サーブレットやJSPで個別に文字コードを設定する必要がなくなる。
+*/
